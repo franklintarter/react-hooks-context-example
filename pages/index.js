@@ -1,14 +1,22 @@
 import React, { useContext } from "react";
-import { CartContext } from "../context/cart-context";
+// import { CartContext } from "../context/cart-context";
+import Products from "../components/products";
+// import { CartContext } from "../context/cart-context";
+import Layout from "../components/layout";
 import "../styles/index.css";
 
 export default () => {
-  const ctx = useContext(CartContext);
-  console.log(ctx);
+  // console.log(ctx);
+  // const cartContext = useContext(CartContext);
+  // const numItems = cartContext.cartItems.length;
+
   return (
-    <div className="p-4 shadow rounded bg-white">
-      <h1 className="text-purple-500 leading-normal">Next.js</h1>
-      <p className="text-gray-500">with Tailwind CSS</p>
-    </div>
+    <Layout>
+      <div>
+        <div className="">
+          <Products />
+        </div>
+      </div>
+    </Layout>
   );
 };
