@@ -11,5 +11,5 @@ const createProductElements = (products, cartItems) => {
 export default () => {
   const { products, cartItems } = useContext(CartContext);
   const productEls = createProductElements(products, cartItems);
-  return <div className="flex justify-center flex-wrap">{productEls}</div>;
+  return <div className="flex flex-wrap">{productEls}</div>;
 };

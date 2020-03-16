@@ -4,7 +4,7 @@ const CartContext = React.createContext();
 
 const products = [
   {
-    name: "Test",
+    name: "Red Striped Shirt",
     price: 123,
     image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
   },
@@ -35,22 +35,13 @@ const discounts = [
 ];
 
 const CartProvider = ({ children }) => {
-  const [fruit, setFruit] = useState("Apple");
   const [cartItems, setCartItems] = useState([]);
-
-  // const cartItems = [];
 
   const addToCart = name => {
     setCartItems([name, ...cartItems]);
-    // cartItems.push(name);
-    console.log(cartItems);
   };
 
-  // const addToCart(productId) => {
-
-  // }
-
-  const value = { fruit, products, cartItems, addToCart };
+  const value = { products, cartItems, addToCart };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };

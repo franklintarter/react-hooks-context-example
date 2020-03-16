@@ -7,7 +7,7 @@ export default ({ product }) => {
   const { name, image } = product;
   return (
     <div className="w-100 mt-12 flex justify-center">
-      <div className="px-4 xs:w-2/3 sm:w-2/3 lg:w-1/2">
+      <div className="px-4">
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
           <img alt={name} src={image} />
           <div className="px-4 pt-5 pt-2 sm:px-6">
