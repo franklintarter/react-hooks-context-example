@@ -11,16 +11,16 @@ const products = [
     image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
   },
   {
-    sku: "PANTS-1",
-    name: "Blue Pants",
+    sku: "SHOES-1",
+    name: "Colorful Shoes",
     price: 59.99,
-    image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
+    image: "/irene-kredenets-dwKiHoqqxk8-unsplash.jpg"
   },
   {
-    sku: "SHOES-1",
-    name: "Black Shoes",
+    sku: "SHOES-2",
+    name: "Red Shoes",
     price: 109.99,
-    image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
+    image: "/paul-gaudriault-a-QH9MAAVNI-unsplash.jpg"
   }
 ];
 

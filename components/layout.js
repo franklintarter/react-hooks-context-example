@@ -1,6 +1,52 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/cart-context";
 
+const PhotoCredit = ({ name, url }) => {
+  return (
+    <a
+      style={{
+        "background-color": "black",
+        color: "white",
+        "text-decoration": "none",
+        padding: "4px 6px",
+        "font-family":
+          "-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif",
+        "font-size": "12px",
+        "font-weight": "bold",
+        "line-height": "1.2",
+        display: "inline-block",
+        "border-radius": "3px"
+      }}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Download free do whatever you want high-resolution photos from Mrushad Khombhadia"
+      className="mr-3"
+    >
+      <span style={{ display: "inline-block", padding: "2px 3px" }}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          style={{
+            height: "12px",
+            width: "auto",
+            position: "relative",
+            "vertical-align": "middle",
+            top: "2px",
+            fill: "white"
+          }}
+          viewBox="0 0 32 32"
+        >
+          <title>unsplash-logo</title>
+          <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z" />
+        </svg>
+      </span>
+      <span style={{ display: "inline-block", padding: "2px 3px" }}>
+        {name}
+      </span>
+    </a>
+  );
+};
+
 export default ({ children }) => {
   const { cartItems } = useContext(CartContext);
 
@@ -56,6 +102,23 @@ export default ({ children }) => {
             {children}
           </div>
         </main>
+        <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 ">
+          <h3 className="mb-4 text-red-900 text-xl border-b-2">
+            Photo Credits
+          </h3>
+          <PhotoCredit
+            name="Mrushad Khombhadia"
+            url="https://unsplash.com/@mushyy?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+          />
+          <PhotoCredit
+            name="Paul Gaudriault"
+            url="https://unsplash.com/@pl_gt?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+          />
+          <PhotoCredit
+            name="Irene Kredenets"
+            url="https://unsplash.com/@ikredenets?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+          />
+        </footer>
       </div>
     </>
   );
