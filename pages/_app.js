@@ -1,12 +1,10 @@
 import React from "react";
 import { CartProvider } from "../context/cart-context";
 
-function MyApp({ Component, pageProps }) {
+export default ({ Component, pageProps }) => {
   return (
     <CartProvider>
       <Component {...pageProps} />
     </CartProvider>
   );
-}
-
-export default MyApp;
+};

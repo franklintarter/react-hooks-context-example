@@ -10,16 +10,9 @@ export default ({ children }) => {
         <nav className="bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="h-8 w-8"
-                    src="/img/logos/workflow-mark-on-dark.svg"
-                    alt=""
-                  />
-                </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline">
+              <div className="flex items-start">
+                <div>
+                  <div className="flex items-baseline">
                     <a
                       href="/"
                       className="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700"
@@ -29,23 +22,24 @@ export default ({ children }) => {
                   </div>
                 </div>
               </div>
-              <div className="hidden md:block">
+              <div>
                 <div className="ml-4 flex items-center md:ml-6">
                   <button
                     type="button"
                     className="relative p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700"
                   >
                     <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
                       className="h-6 w-6"
                       stroke="currentColor"
                       fill="none"
-                      viewBox="0 0 24 24"
                     >
                       <path
+                        strokeWidth="1"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                        d="M17 16a3 3 0 1 1-2.83 2H9.83a3 3 0 1 1-5.62-.1A3 3 0 0 1 5 12V4H3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1v1h14a1 1 0 0 1 .9 1.45l-4 8a1 1 0 0 1-.9.55H5a1 1 0 0 0 0 2h12zM7 12h9.38l3-6H7v6zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
                       />
                     </svg>
                     <span className="text-xs text-gray-100 flex items-center justify-center absolute top-0 right-0 rounded-full bg-red-700 h-4 w-4">
@@ -54,49 +48,12 @@ export default ({ children }) => {
                   </button>
                 </div>
               </div>
-              <div className="-mr-2 flex md:hidden">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    stroke="currentColor"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      className="inline-flex"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                    <path
-                      className="hidden"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
             </div>
           </div>
         </nav>
-        <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold leading-tight text-gray-900">
-              Shop
-            </h2>
-          </div>
-        </header>
         <main>
-          <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            {/* <!-- Replace with your content --> */}
+          <div className="px-4 max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             {children}
-            {/* <!-- /End replace --> */}
           </div>
         </main>
       </div>

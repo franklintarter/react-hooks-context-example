@@ -2,46 +2,43 @@ import React, { useState } from "react";
 
 const CartContext = React.createContext();
 
+// From CMS/API
 const products = [
   {
+    sku: "SHIRT-1",
     name: "Red Striped Shirt",
-    price: 123,
+    price: 29.99,
     image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
   },
   {
-    name: "Test 2",
-    price: 123,
+    sku: "PANTS-1",
+    name: "Blue Pants",
+    price: 59.99,
     image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
   },
   {
-    name: "Test 3",
-    price: 123,
+    sku: "SHOES-1",
+    name: "Black Shoes",
+    price: 109.99,
     image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
-  },
-  {
-    name: "Test 4",
-    price: 123,
-    image: "/mrushad-khombhadia-GlgDs6_WhTg-unsplash.jpg"
-  }
-];
-
-const discounts = [
-  {
-    code: "SPRING2020",
-    totalCartDiscount: true,
-    discountAmountPercentage: 20,
-    items: []
   }
 ];
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = name => {
-    setCartItems([name, ...cartItems]);
+  const addToCart = sku => {
+    const itemToAdd = products.find(item => item.sku === sku);
+    const nextCartItems = [itemToAdd, ...cartItems];
+    setCartItems(nextCartItems);
   };
 
-  const value = { products, cartItems, addToCart };
+  const removeFromCart = sku => {
+    const nextCartItems = cartItems.filter(item => item.sku !== sku);
+    setCartItems(nextCartItems);
+  };
+
+  const value = { products, cartItems, addToCart, removeFromCart };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
