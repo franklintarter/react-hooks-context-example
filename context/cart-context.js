@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 
-const CartContext = React.createContext();
+const CartContext = createContext();
 
 // From CMS/API
 const products = [
@@ -38,6 +38,7 @@ const CartProvider = ({ children }) => {
     setCartItems(nextCartItems);
   };
 
+  // Public API of the Context
   const value = { products, cartItems, addToCart, removeFromCart };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
-import { CartContext } from "../context/cart-context";
+import React from "react";
 
-export default ({ product }) => {
-  const { addToCart } = useContext(CartContext);
-
-  const { name, image, sku, price } = product;
+export default ({ name, image, price, addToCart }) => {
   return (
     <div className="w-100 mt-12 flex justify-center">
       <div>
@@ -27,7 +23,7 @@ export default ({ product }) => {
                 <dd className="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
                   <button
                     type="button"
-                    onClick={() => addToCart(sku)}
+                    onClick={addToCart}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >
                     Add To Cart

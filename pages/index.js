@@ -1,8 +1,8 @@
 import React from "react";
-import Products from "../components/products";
-import Layout from "../components/layout";
+import Products from "../components/Products";
+import Layout from "../components/Layout";
 import "../styles/index.css";
-import Cart from "../components/cart";
+import Cart from "../components/Cart";
 
 export default () => {
   return (
