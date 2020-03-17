@@ -10,14 +10,17 @@ const filterAvailableProducts = (products, cartItems) => {
 export default () => {
   const { products, cartItems, addToCart } = useContext(CartContext);
   const availableProducts = filterAvailableProducts(products, cartItems);
-  const productEls = availableProducts.map(p => (
-    <Product
-      key={p.sku}
-      name={p.name}
-      price={p.price}
-      image={p.image}
-      addToCart={() => addToCart(p.sku)}
-    />
-  ));
-  return <div className="flex flex-wrap">{productEls}</div>;
+  return (
+    <div className="flex flex-wrap">
+      {availableProducts.map(p => (
+        <Product
+          key={p.sku}
+          name={p.name}
+          price={p.price}
+          image={p.image}
+          addToCart={() => addToCart(p.sku)}
+        />
+      ))}
+    </div>
+  );
 };

@@ -7,11 +7,11 @@ export default ({ name, url }) => {
         backgroundColor: "black",
         color: "white",
         padding: "4px 6px",
-        "font-family":
+        fontFamily:
           "-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif",
-        "font-size": "12px",
-        "font-weight": "bold",
-        "line-height": "1.2",
+        fontSize: "12px",
+        fontWeight: "bold",
+        lineHeight: "1.2",
         display: "inline-block",
         "border-radius": "3px"
       }}
@@ -28,7 +28,7 @@ export default ({ name, url }) => {
             height: "12px",
             width: "auto",
             position: "relative",
-            "vertical-align": "middle",
+            verticalAlign: "middle",
             top: "2px",
             fill: "white"
           }}
