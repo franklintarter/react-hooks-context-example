@@ -1,3 +1,5 @@
+This is an example of how to do state management with React Hooks + Context referenced in my [blog post](https://franklintarter.com/global-state-with-react-hooks-and-context).
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
